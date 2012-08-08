@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@drawable/bg_game">
+  <!-- My Info -->
+  <LinearLayout
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:layout_alignParentLeft="true"
+	android:layout_alignParentBottom="true">
+	
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="@string/ren_battle_player_1"
+		android:textColor="#FF000000" />
+	
+	<Button
+		android:id="@+id/btn_my_select"
+		android:layout_width="wrap_content"
+		android:layout_height="40dp"
+		android:text="选择"
+		android:textSize="15sp"
+		android:visibility = "gone" />
+		
+	<Button android:text="决胜"
+			android:id="@+id/btn_my_fire"
+			android:layout_height="40dp"
+			android:textSize="15sp" 
+			android:layout_width="wrap_content"
+			android:visibility="gone"></Button>	
+	
+	
+	</LinearLayout>
+	<!-- enemy info -->
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:paddingRight="30dp"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentTop="true">
+      <TextView 
+          android:layout_width="wrap_content" 
+          android:layout_height="wrap_content" 
+          android:text="@string/ren_battle_player_2" 
+          android:textColor="#FF000000"/>
+	</LinearLayout>
+	
+	<!-- 机器 -->
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="fill_parent"
+		android:orientation="horizontal"
+		android:layout_centerInParent="true"
+		>
+	
+		<ImageView
+			android:id="@+id/img_jiqi_all"
+			android:layout_width="330px"
+			android:layout_height="wrap_content"
+			android:visibility="visible"
+			android:src="@drawable/jiqi_all"
+			android:scaleType="fitXY"
+			/>
+		
+  			<LinearLayout
+  				android:id="@+id/linear_jiqi_half"
+  				android:layout_width="wrap_content"
+  				android:layout_height="fill_parent"
+  				android:orientation="horizontal"
+  				android:visibility="gone"
+  				>
+				<ImageView
+					android:id="@+id/img_jiqi_left"
+					android:layout_width="150px"
+					android:layout_height="wrap_content"
+					android:src="@drawable/jiqi_left"
+					android:scaleType="fitXY"
+					
+					/>
+					
+				<LinearLayout
+				    android:id="@+id/linear_battle_field"
+				    android:layout_width="wrap_content"
+				    android:layout_height="fill_parent"
+				    android:gravity="center_horizontal"
+				    android:orientation="vertical"
+				    android:paddingBottom="15dp"
+				    android:paddingTop="15dp" >
+
+	  				<ImageView
+	  					android:id="@+id/img_enemy_hand"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:src="@drawable/shitou_down"
+						android:maxWidth="200px"
+						android:maxHeight="200px"
+						android:scaleType="fitXY"
+						android:adjustViewBounds="true"
+						/>
+					<View android:layout_width="1px"
+						android:layout_height="wrap_content"
+						android:layout_weight="1" ></View>
+					<ImageView
+						android:id="@+id/img_my_hand"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:maxWidth="200px"
+						android:maxHeight="200px"
+						android:src="@drawable/shitou_up"
+						android:scaleType="fitXY"
+						android:adjustViewBounds="true"
+						/>
+	  				
+  				</LinearLayout>
+  				
+				<ImageView
+					android:id="@+id/img_jiqi_right"
+					android:layout_width="150px"
+					android:layout_height="wrap_content"
+					android:src="@drawable/jiqi_right"
+					android:scaleType="fitXY"
+					/>
+  			</LinearLayout>
+		
+	</LinearLayout>
+	
+	<!-- 出招 -->
+	<LinearLayout
+		android:id="@+id/linear_selector"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:background="#70616262"
+		android:orientation="vertical"
+		android:gravity="center_horizontal"
+		android:visibility="visible"
+		android:layout_alignParentBottom="true"
+		android:layout_centerHorizontal="true"
+		>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:textColor="#FF000000"
+			android:text=""
+			android:textSize="15sp"
+			android:id="@+id/tv_selector_player_name" />
+		
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center"
+			android:layout_marginBottom="20dp"
+			android:padding="20dp"
+			>
+			<ImageView
+				android:id="@+id/img_select_shitou"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/shitou_up"
+				android:maxWidth="200px"
+				android:maxHeight="200px"
+				android:scaleType="fitXY"
+				android:adjustViewBounds="true"
+				/>
+			<ImageView
+				android:id="@+id/img_select_jiandao"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/jiandao_up"
+				android:maxWidth="200px"
+				android:maxHeight="200px"
+				android:scaleType="fitXY"
+				android:adjustViewBounds="true"
+				android:layout_marginLeft="20dp"
+				android:layout_marginRight="10dp"
+				/>
+			<ImageView
+				android:id="@+id/img_select_bu"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:src="@drawable/bu_up"
+				android:maxWidth="200px"
+				android:maxHeight="200px"
+				android:scaleType="fitXY"
+				android:adjustViewBounds="true"
+				/>
+		</LinearLayout>
+		
+		<Button
+			android:id="@+id/btn_selector_ok"
+			android:layout_width="120dp"
+			android:layout_height="wrap_content"
+			android:text="确  定"
+			android:visibility="gone"
+			/>
+	</LinearLayout>
+	
+
+  
+</RelativeLayout>
