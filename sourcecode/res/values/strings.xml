@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, MainActivity!</string>
+    <string name="app_name">争端解决者</string>
+    
+    <string name="ren_battle_player_1">Player 1</string>
+    <string name="ren_battle_player_2">Player 2</string>
+</resources>
