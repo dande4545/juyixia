@@ -115,7 +115,7 @@ public class AppUtils {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Time:"+AppUtils.date2String(gpsTime)+",");
 		sb.append("latitude:"+latitude+latitudeType+",");
-		sb.append("longitude:"+latitude+longitudeType+",");
+		sb.append("longitude:"+longitude+longitudeType+",");
 		sb.append("speed:"+(int)(speed*100)+",");
 		sb.append("height:"+height+",");
 		sb.append("direction:"+direction);
