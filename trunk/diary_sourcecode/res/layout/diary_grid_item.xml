@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout   
+    xmlns:android="http://schemas.android.com/apk/res/android"   
+    android:layout_height="100dp"
+    android:layout_width="100dp"
+    android:background="@drawable/note_bg"
+    >
+    <!-- -->
+    <ImageView 
+        android:id="@+id/img_diary_item_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="center"
+        android:visibility="gone"
+        />
+       
+    <LinearLayout
+        android:id="@+id/linear_diary_item_main"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:layout_height="fill_parent"   
+         android:layout_width="fill_parent">       
+	    <TextView   
+	          android:layout_height="wrap_content"   
+	          android:layout_width="fill_parent"
+	          android:layout_marginTop="2dp"
+	          android:layout_marginBottom="1dp"   
+	          android:id="@+id/tv_diary_item_title"
+	          android:singleLine="true"
+	          android:ellipsize="end"
+	          android:textSize="10pt"
+	          android:textColor="@color/black"
+	          android:textStyle="bold"/>   
+	    <TextView   
+	          android:layout_width="fill_parent"   
+	          android:layout_height="wrap_content"
+	          android:layout_marginLeft="2dp"
+	          android:paddingLeft="5dp"
+	          android:paddingRight="0dp"
+	          android:paddingTop="1dp"
+	          android:paddingBottom="0dp"
+	          android:singleLine="false"
+	          android:textColor="@color/black"
+	          android:maxLines="4"
+	          android:textSize="8pt"
+			  android:ellipsize="end"
+	          android:id="@+id/tv_diary_item_content"/>
+	          <!-- android:textSize="6pt" -->  
+    </LinearLayout>
+</RelativeLayout> 

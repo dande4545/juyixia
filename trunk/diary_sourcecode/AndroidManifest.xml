@@ -6,6 +6,9 @@
     <uses-sdk
         android:minSdkVersion="7"
         android:targetSdkVersion="15" />
+    
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -13,14 +16,25 @@
         android:theme="@style/AppTheme" >
         <!-- 主界面 -->
         <activity
-            android:name=".activity.DiaryActivity"
-            android:label="@string/title_activity_diary" >
+            android:name=".activity.SloganActivity"
+            android:label="@string/title_activity_diary"
+             >
+            <!-- android:theme="@android:style/Theme.Black.NoTitleBar" -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <activity
+            android:name=".activity.DiaryActivity"
+            android:label="@string/title_activity_diary" />
+        
+        <activity
+            android:name=".activity.DiaryEditActivity"
+            android:label="@string/title_activity_diary_edit"
+            android:theme="@android:style/Theme.Dialog" />
         
         <!-- 接受开机启动的广播 -->
 		<receiver android:name=".BootReceiver">
