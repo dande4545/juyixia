@@ -76,7 +76,7 @@ public class DiaryService extends Service {
 //	//	  				App.setCurrentLocation(location);
 //				Log.d(TAG, "last location,"+AppUtil.getLocationString(location));
 //			}
-			locationManager.requestLocationUpdates(strLocationProvider, 20*60*1000, 600, locationListener);
+			locationManager.requestLocationUpdates(strLocationProvider, 10*60*1000, 600, locationListener);
 		}
 		setForeground(true);
 		Log.d(TAG, "DiaryService -- server is started...");
@@ -125,10 +125,10 @@ public class DiaryService extends Service {
 	private boolean isOpenGPS(){
 		 if (locationManager .isProviderEnabled(android.location.LocationManager.GPS_PROVIDER)
 				 || locationManager .isProviderEnabled(android.location.LocationManager.NETWORK_PROVIDER)) {
-			 Log.i("RemoteSocket", "RemoteService -- gps is enable");
+			 Log.i(TAG, "RemoteService -- gps is enable");
 			 return true;
 		 }else{
-			 Log.i("RemoteSocket", "RemoteService -- gps is not enable");
+			 Log.i(TAG, "RemoteService -- gps is not enable");
 			 return false;
 		 }
 	}
