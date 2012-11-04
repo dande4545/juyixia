@@ -1,14 +1,32 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="fill_parent" 
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world"
-        tools:context=".DiaryActivity" />
+        >
+       	<ImageView
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_centerVertical="true"
+	        android:src="@drawable/main_topbar"
+	        android:scaleType="fitXY"
+	        android:adjustViewBounds="true"
+	        tools:context=".DiaryActivity" />
+    </RelativeLayout>
+    
+    <GridView
+	    android:id="@+id/gv_diary_main"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="fill_parent"
+	    android:numColumns="3"
+	    android:stretchMode="columnWidth"
+	    android:gravity="center"
+	    android:background="@drawable/bg"
+	/>
 
-</RelativeLayout>
+</LinearLayout>
